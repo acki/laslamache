@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  layout 'application'
   # GET /tasks
   # GET /tasks.xml
   def index

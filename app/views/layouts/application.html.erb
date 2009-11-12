@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Las La Mache</title>
+    <%= stylesheet_link_tag 'layout' %>
+    <%= stylesheet_link_tag 'jquery.treeview' %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery-ui' %>
+    <%= javascript_include_tag 'jrails' %>
+    <%= javascript_include_tag 'jquery.cookie' %>
+    <%= javascript_include_tag 'jquery.treeview.min' %>
+    <script type="text/javascript" language="javascript">
+      $(function() {
+      $('#classification').treeview({
+
+      anmiated : 'fast',
+      collapsed : true,
+      unique : true,
+      persist : 'cookie',
+
+      });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div id="header">
+
+      <div id="logo">
+        <h1><a href="/">Las La Mache</a></h1>
+      </div>
+
+      <ul id="account_actions" class="structural actions">
+        <li><span>Hugo Boss</span></li>
+        <li><a href="#">Konto</a></li>
+        <li><a href="#">Einstellungen</a></li>
+        <li><a href="#">Abmelden</a></li>
+      </ul>
+
+      <div class="clearfix"></div>
+
+      <ul id="site_actions" class="structural actions clearfix">
+        <li><a href="/tasks/new">Auftrag ausschreiben</a></li>
+        <li><a href="/tasks">Aufträge durchsuchen</a></li>
+      </ul>
+
+      <ul id="user_actions" class="structural actions">
+        <li><a href="#">Postfach</a></li>
+        <li><a href="#">Fragen</a></li>
+        <li><a href="#">Meine Aufträge</a></li>
+        <li><a href="#">Meine Angebote</a></li>
+        <li><a href="#">Beobachtete Aufträge</a></li>
+      </ul>
+
+    </div>
+
+
+    <div id="body" class="two-columns">
+
+      <div id="left_column">
+        <ul id="classification" class="treeview-red">
+          <li><span><a href="#">Bauarbeiten, Erdarbeiten</a> (981)</span>
+            <ul>
+              <li><span><a href="#">Beauty, Sport</a> (160)</span></li>
+              <li><span><a href="#">Dachdeckerarbeiten</a> (971)</span></li>
+              <li><span><a href="#">EDV, Telekommunikation</a> (796)</span></li>
+              <li><span><a href="#">Elektrikarbeiten</a> (1240)</span></li>
+              <li><span><a href="#">Entsorgung, Beseitigung</a> (607)</span></li>
+              <li><span><a href="#">Events, Gastronomie</a> (770)</span></li>
+            </li></ul>
+          <li><span><a href="#">Fenster, Türen, Glas, Rollos</a> (1428)</span>
+            <ul>
+              <li><span><a href="#">Fliesenleger, Platten, Mosaik</a> (933)</span></li>
+              <li><span><a href="#">Garten, Landschaftsarbeiten</a> (1431)</span></li>
+              <li><span><a href="#">Haushalt, Betreuung, Pflege</a> (443)</span></li>
+              <li><span><a href="#">Heizung, Klima, Sanitär</a> (2038)</span></li>
+              <li><span><a href="#">Hobby, Freizeit</a> (357)</span></li>
+              <li><span><a href="#">Kfz, Motorrad, Boote</a> (2659)</span></li>
+              <li><span><a href="#">Maler, Lackierer</a> (2439)</span></li>
+            </li></ul>
+          <li><span><a href="#">Maurer, Beton, Fugen, Estrich</a> (1074)</span>
+            <ul>
+              <li><span><a href="#">Metallbau, Verarbeitung</a> (555)</span></li>
+              <li><span><a href="#">Parkettböden, Teppichböden</a> (611)</span></li>
+              <li><span><a href="#">Planung, Beratung</a> (236)</span></li>
+              <li><span><a href="#">Putz, Stuck</a> (486)</span></li>
+              <li><span><a href="#">Raumausstatter</a> (328)</span></li>
+              <li><span><a href="#">Reinigungskräfte</a> (1029)</span></li>
+            </li></ul>
+          <li><span><a href="#">Straßenbau, Wege, Pflasterer</a> (318)</span>
+            <ul>
+              <li><span><a href="#">Treppen, Innenausbau</a> (474)</span></li>
+              <li><span><a href="#">Umzüge, Transporte</a> (2510)</span></li>
+              <li><span><a href="#">Unterricht, Übersetzungen</a> (223)</span></li>
+            </li></ul>
+          <li><span><a href="#">Verleih, Vermietung</a> (596)</span>
+            <ul>
+              <li><span><a href="#">Werbung, Druck, Schilder</a> (469)</span></li>
+              <li><span><a href="#">Wer liefert günstiger</a> (2571)</span></li>
+              <li><span><a href="#">Zimmerer, Holz, Tischler</a> (1790)</span></li>
+              <li><span><a href="#">Sonstige Dienstleistungen</a> (1662)</span></li>
+              <li><span><a href="#">Sonstige Handwerksleistungen</a> (2925)</span></li>
+            </li></ul>
+
+        </ul>
+      </div>
+
+      <div id="content">
+        <p style="color: green"><%= flash[:notice] %></p>
+        <%= yield  %>
+      </div>
+
+      <div id="right_column">
+        blubb
+      </div>
+
+    </div>
+
+  </body>
+</html>
