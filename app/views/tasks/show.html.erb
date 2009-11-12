@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @task.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @task.description %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @task.text %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @task.price %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @task.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

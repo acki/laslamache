@@ -1,0 +1,13 @@
+<p>
+  <b>Price:</b>
+  <%=h @offer.price %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @offer.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>
