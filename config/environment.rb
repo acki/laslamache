@@ -28,7 +28,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'haml', :version => '>2.2.0'
-  config.gem 'chriseppstein-compass', :version => '>0.8.9', :source => 'http://gems.github.com/'
+  #config.gem 'chriseppstein-compass', :version => '0.8.9', :source => 'http://gems.github.com/'
 
   # Only load the plugins named here, in the order given. By default, all plugins
   # in vendor/plugins are loaded in alphabetical order.

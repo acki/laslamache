@@ -1,0 +1,7 @@
+
+CSS:
+http://el-hawari.net/2009/06/rails-compass-from-scratch/
+
+compass compilation mode:
+cd public
+compass --watch ..
