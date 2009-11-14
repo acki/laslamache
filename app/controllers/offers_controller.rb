@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  layout 'application'
   # GET /offers
   # GET /offers.xml
   def index

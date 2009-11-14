@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  layout 'application'
   # GET /messages
   # GET /messages.xml
   def index
