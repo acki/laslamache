@@ -1,0 +1,11 @@
+<li>
+  <a href="#"><%= category.title %></a>
+  <% if category.children.length > 0 %>
+    <ul>
+      <% for subcat in category.children %>
+        <%= render :partial => 'layouts/category_item', :locals => {:category => subcat} %>
+      <% end %>
+    </ul>
+  <% end %>
+</li>
+
