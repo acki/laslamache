@@ -6,6 +6,10 @@ INSTALL:
 -> script/server
 
 
+PLANNED PLUGINS AND USEFUL LINKS:
+- authentication: http://github.com/binarylogic/authlogic/
+
+
 
 CSS:
 http://el-hawari.net/2009/06/rails-compass-from-scratch/
