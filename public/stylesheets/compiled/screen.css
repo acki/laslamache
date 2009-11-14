@@ -165,3 +165,6 @@ body #content { display: inline; float: left; margin-right: 0; width: 630px; }
 #header #action_listing #user_actions ul li.last { padding-right: 0px; }
 #header #action_listing #user_actions ul li a { text-decoration: none; }
 #header #action_listing #user_actions ul li a:hover { text-decoration: underline; }
+
+/* CATEGORIES LISTING */
+.category-listing li { list-style-type: none; margin-left: 0px; }

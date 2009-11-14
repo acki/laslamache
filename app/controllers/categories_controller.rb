@@ -33,6 +33,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def new_subcategory
+    parent = Category.find(params[:id])
+    @category = parent.children.create
+  end
+
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])

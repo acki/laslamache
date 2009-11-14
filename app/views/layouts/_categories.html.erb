@@ -1,5 +1,5 @@
 
-<ul>
+<ul class="category-listing">
 
   <% for category in Category.roots %>
     <%= render :partial => 'layouts/category_item', :locals => {:category => category} %>
