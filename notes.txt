@@ -1,4 +1,12 @@
 
+INSTALL:
+-> add http://www.gemcutter.org/ to sources in ~/.gemrc
+-> rake gems:install
+-> rake db:migrate
+-> script/server
+
+
+
 CSS:
 http://el-hawari.net/2009/06/rails-compass-from-scratch/
 
