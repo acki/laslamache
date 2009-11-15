@@ -168,3 +168,10 @@ body #content { display: inline; float: left; margin-right: 0; width: 630px; }
 
 /* CATEGORIES LISTING */
 .category-listing li { list-style-type: none; margin-left: 0px; }
+
+/* GLOBAL CLASSES */
+.item_actions { margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; }
+.item_actions { display: block; }
+.item_actions li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 6px; padding-right: 6px; }
+.item_actions li.first { padding-left: 0px; }
+.item_actions li.last { padding-right: 0px; }

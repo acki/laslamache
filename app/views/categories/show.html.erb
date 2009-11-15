@@ -1,6 +1,9 @@
 <h1><%= @category.title %></h1>
-<a href="/categories/<%= @category.id %>/new_subcategory">Neue Unterkategorie</a>
-<a href="/categories/new">Neue Hauptkategorie</a>
+
+<ul class="item_actions">
+  <li><a href="/categories/<%= @category.id %>/new_subcategory">Neue Unterkategorie</a></li>
+  <li><a href="/categories/new">Neue Hauptkategorie</a></li>
+</ul>
 
 <hr />
 
