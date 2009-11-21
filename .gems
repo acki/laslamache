@@ -1,4 +1,4 @@
-haml, :version => '>2.2.0'
+haml
 compass
 ancestry
 formtastic
