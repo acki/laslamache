@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  acts_as_tree
+  #acts_as_tree
 end
