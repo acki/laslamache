@@ -1,0 +1,4 @@
+  haml, :version => '>2.2.0'
+  compass, :source => 'http://www.gemcutter.org/'
+  ancestry, :source => 'http://www.gemcutter.org/'
+  formtastic, :source => 'http://www.gemcutter.org/'
