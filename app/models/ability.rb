@@ -9,10 +9,9 @@ class Ability
       # anonymous
       cannot :create, [ Task ]
 
-    elsif user.login == 'jone'
-      # mr. jone
+    elsif user.is?(:manager)
+      # manager
       can :manage, :all
-
     else
       # logged in
       can :read, :all

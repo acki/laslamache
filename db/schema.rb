@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091128182601) do
+ActiveRecord::Schema.define(:version => 20091205162917) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20091128182601) do
     t.datetime "current_login_at"
     t.string   "last_login_ip"
     t.string   "current_login_ip"
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["last_request_at"], :name => "index_users_on_last_request_at"
