@@ -45,7 +45,7 @@
           <ul>
             <% if current_user %>
               <li><%= link_to 'Einstellungen', current_user %></li>
-              <li><%= link_to "Abmelden", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %></li>
+              <li><%= link_to "Abmelden", user_session_path, :method => :delete %></li>
             <% else %>
               <li><%= link_to 'Registrieren', new_user_path %></li>
               <li><%= link_to "Anmelden", new_user_session_path %></li>
