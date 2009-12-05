@@ -2,3 +2,4 @@ haml
 compass
 ancestry
 formtastic
+authlogic
