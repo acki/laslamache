@@ -7,9 +7,9 @@
     <title>Las La Mache</title>
     <%= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection' %>
     <%= stylesheet_link_tag 'compiled/print.css', :media => 'print' %>
-    <!--![if IE]>
+    <!--[if IE]>
     <%= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection' %>
-    <![endif]–>
+    <![endif]-->
     <!-- -->
     <%= stylesheet_link_tag 'jquery.treeview' %>
     <%= stylesheet_link_tag "formtastic" %>
@@ -44,6 +44,9 @@
         <div id="account_actions">
           <ul>
             <% if current_user %>
+              <% if can? :manage, User -%>
+                <li><%= link_to 'Benutzer', users_path, :method => :index %></li>
+              <% end -%>
               <li><%= link_to 'Einstellungen', current_user %></li>
               <li><%= link_to "Abmelden", user_session_path, :method => :delete %></li>
             <% else %>
@@ -64,11 +67,13 @@
 
           <div id="user_actions">
             <ul>
-              <li><a href="#">Postfach</a></li>
-              <li><a href="#">Fragen</a></li>
-              <li><a href="#">Meine Aufträge</a></li>
-              <li><a href="#">Meine Angebote</a></li>
-              <li><a href="#">Beobachtete Aufträge</a></li>
+              <% if current_user -%>
+                <li><a href="#">Postfach</a></li>
+                <li><a href="#">Fragen</a></li>
+                <li><a href="#">Meine Aufträge</a></li>
+                <li><a href="#">Meine Angebote</a></li>
+                <li><a href="#">Beobachtete Aufträge</a></li>
+              <% end -%>
             </ul>
           </div>
 
