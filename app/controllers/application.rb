@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password, :password_confirmation
+  rescue_from CanCan::AccessDenied, :with => :access_denied
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
@@ -15,6 +16,18 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password").
   # filter_parameter_logging :password
   page_title = 'LasLaMache'
+
+  protected
+  def access_denied
+    flash[:error] = "Sie sind nicht berechtigt, diese Seite aufzurufen."
+    if not current_user
+      redirect_to new_user_session_url
+    else
+      redirect_to root_url
+    end
+  end
+
+
 
   private
   def current_user_session

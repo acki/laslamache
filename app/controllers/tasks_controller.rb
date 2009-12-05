@@ -1,5 +1,7 @@
 class TasksController < ApplicationController
   layout 'application'
+  before_filter :load_and_authorize_resource
+
   # GET /tasks
   # GET /tasks.xml
   def index
