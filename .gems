@@ -3,3 +3,4 @@ compass
 ancestry
 formtastic
 authlogic
+cancan

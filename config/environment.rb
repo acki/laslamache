@@ -32,6 +32,7 @@ Rails::Initializer.run do |config|
   config.gem 'ancestry', :source => 'http://www.gemcutter.org/'
   config.gem 'formtastic', :source => 'http://www.gemcutter.org/'
   config.gem 'authlogic'
+  config.gem 'cancan', :source => 'http://www.gemcutter.org/'
   #config.gem 'chriseppstein-compass', :version => '0.8.9', :source => 'http://gems.github.com/'
 
   # Only load the plugins named here, in the order given. By default, all plugins
