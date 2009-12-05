@@ -1,0 +1,19 @@
+<h1>Anmelden</h1>
+
+<% semantic_form_for @user_session, :url => user_session_path do |form| %>
+  <% form.inputs do %>
+    <%= form.input :login %>
+    <%= form.input :password %>
+  <% end %>
+  <% form.buttons do %>
+    <%= form.submit 'Anmelden' %>
+  <% end %>
+<% end %>
+
+<hr />
+
+<p>
+  Noch nicht registriert?<br />
+  <%= link_to "Hier registrieren", new_user_path %>
+</p>
+

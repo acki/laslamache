@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resource :account, :controller => "users"
+  map.resources :users
+  map.resource :user_session
+  #map.root :controller => "user_sessions", :action => "new"
+
+
   map.resources :categories, :member => ['new_subcategory']
 
   map.resources :messages
@@ -27,7 +33,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments
