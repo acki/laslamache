@@ -45,9 +45,9 @@
           <ul>
             <% if current_user %>
               <% if can? :manage, User -%>
-                <li><%= link_to 'Benutzer', users_path, :method => :index %></li>
+                <li><%= link_to 'Benutzer', users_path %></li>
               <% end -%>
-              <li><%= link_to 'Einstellungen', current_user %></li>
+              <li><%= link_to 'Konto', :account %></li>
               <li><%= link_to "Abmelden", user_session_path, :method => :delete %></li>
             <% else %>
               <li><%= link_to 'Registrieren', new_user_path %></li>

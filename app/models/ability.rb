@@ -3,7 +3,9 @@ class Ability
 
   def initialize( user )
     # everybody
-    can :read, [ Category, Message, Offer, Question, Task]
+
+    cannot :read, [User, UsersController ]
+    can :read, [ Category, Message, Offer, Question, Task ]
 
     if not user
       # anonymous
@@ -14,8 +16,8 @@ class Ability
       can :manage, :all
     else
       # logged in
-      can :read, :all
       can :create, [ Task, Message, Offer, Question, Task ]
+      can :profile, User
     end
   end
 end
