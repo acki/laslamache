@@ -6,6 +6,8 @@ class Ability
 
     cannot :read, [User, UsersController ]
     can :read, [ Category, Message, Offer, Question, Task ]
+    can :create, [ User, UserSession ]
+    can :new, [ User, UserSession ]
 
     if not user
       # anonymous
