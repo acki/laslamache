@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   layout 'application'
-  before_filter :load_and_authorize_resource
+  load_and_authorize_resource
   # GET /categories
   # GET /categories.xml
   def index

@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   layout 'application'
-  before_filter :load_and_authorize_resource
+  load_and_authorize_resource
   # GET /messages
   # GET /messages.xml
   def index

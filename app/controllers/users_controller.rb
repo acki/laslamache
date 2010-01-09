@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   layout 'application'
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]
-  before_filter :load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def index
